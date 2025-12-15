@@ -11,7 +11,7 @@ namespace GameInventoryManager
         private readonly List<GameItem> items;  // нельзя вызывать список из любой части программы и работать с ним в обход 
         public IReadOnlyCollection<GameItem> Items => items.AsReadOnly(); // без коллекции пришлось бы сделать список публичным ждя работы чс ним
 
-        private readonly ICombinableItem combiner;
+        public ICombinableItem combiner;
 
         public InventoryManager(int maxWeight, ICombinableItem combiner)
         {
